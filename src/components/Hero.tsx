@@ -77,7 +77,7 @@ export default function Hero() {
       text5: "Try WAN 2.2",
     },
     {
-      img: "/IMG/image-8.webp",
+      img: "/IMG/image-9.webp",
       text1: "WAN 2.2",
       text2:
         "Generate complex images with the brand new and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures",
