@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
+/* Default (light mode) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --upground: #23ee08;
+  --navground: rgb(245,245,245);
+  --hoverground: rgb(220,220,220);
+  --dotground: rgb(228, 228, 228);
 }
 
+/* Dark mode overrides when .dark is on <html> */
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --navground: rgb(32,32,32);
+  --hoverground: rgb(50,50,50);
+  --dotground: rgb(109, 107, 107);
+}
+
+/* Tailwind theme tokens (linked to variables) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-upground: var(--upground);
+  --color-navground: var(--navground);
+  --color-hoverground: var(--hoverground); 
+  --color-dotground: var(--dotground); 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global body styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
